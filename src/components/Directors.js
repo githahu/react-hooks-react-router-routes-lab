@@ -6,13 +6,13 @@ function Directors() {
     <div>
       <h1>Directors Page</h1>
   
-        {directors.map((director) => {
+        {directors.map((director, index) => {
           return (
-          <div key={director.name}>
+          <div key={index}>
             {director.name}
            <ul>
-           {director.movies.map((movie) => (
-              <li key={movie}>{movie}</li>
+           {director.movies.map((movieIndex) => (
+              <li key={movieIndex}>{movie}</li>
             ))}
            </ul>
         

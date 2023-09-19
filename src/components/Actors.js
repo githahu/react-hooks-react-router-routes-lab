@@ -5,14 +5,14 @@ function Actors() {
   return (
     <div>
       <h1>Actors Page</h1>
-        {actors.map((actor) => (
-          <div key={actor.name}>
+        {actors.map((actor, index) => (
+          <div key={index}>
             {actor.name}
 
-            {actor.movies.map((movie) => {
+            {actor.movies.map((movie, movieIndex) => {
               return (
 
-                <li key={movie}>{movie}</li>
+                <li key={movieIndex}>{movie}</li>
               )}
             )}
           </div>
