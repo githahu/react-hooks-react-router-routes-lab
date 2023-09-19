@@ -6,19 +6,19 @@ function Movies() {
     <div>
       <h1>Movies Page</h1>
       
-          {movies.map((movie) => (
+          {movies.map((movie, index) => (
            
-             <div key={movie.title}>
-              Title: {movie.title}
-              Time: {movie.time}
+            <div key={movie.title}>
+              <p>Title: {movie.title}</p>
+              <p>Time: {movie.time}</p>
          
-           <ul>
+              <ul>
            
 
-            {movie.genres.map((genre) => (
-              <li key={genre}>{genre}</li>
-            ))}
-            </ul>
+                {movie.genres.map((genre, genreIndex) => (
+                  <li key={genreIndex}>{genre}</li>
+                ))}
+              </ul>
             </div>
           ))}
           
